@@ -1,0 +1,125 @@
+columns:
+  age: float
+  sex: category
+  on_thyroxine: category
+  query_on_thyroxine: category
+  on_antithyroid_medication: category
+  sick: category
+  pregnant: category
+  thyroid_surgery: category
+  I131_treatment: category
+  query_hypothyroid: category
+  query_hyperthyroid: category
+  lithium: category
+  goitre: category
+  tumor: category
+  hypopituitary: category
+  psych: category
+  TSH_measured: category
+  TSH: float
+  T3_measured: category
+  T3: float
+  TT4_measured: category
+  TT4: float
+  T4U_measured: category
+  T4U: float
+  FTI_measured: category
+  FTI: float
+  TBG_measured: category
+  TBG: float
+  referral_source: category
+  Class: category
+
+
+numerical_columns:
+  - age
+  - TT4
+  - T4U
+  - FTI
+  - T3
+
+unwanted_columns:
+  - TSH_measured
+  - T3_measured
+  - TT4_measured
+  - T4U_measured
+  - FTI_measured
+  - TBG_measured
+  - TSH
+  - TBG
+
+categorical_columns:
+  - sex
+  - on_thyroxine
+  - query_on_thyroxine
+  - on_antithyroid_medication
+  - sick
+  - pregnant
+  - thyroid_surgery
+  - I131_treatment
+  - query_hypothyroid
+  - query_hyperthyroid
+  - lithium
+  - goitre
+  - tumor
+  - hypopituitary
+  - psych
+  - referral_source
+
+target_column: Class
+
+
+domain_value:
+  sex:
+    - F
+    - M
+  on_thyroxine:
+    - f
+    - t
+  query_on_thyroxine:
+    - f
+    - t
+  on_antithyroid_medication:
+    - f
+    - t
+  sick:
+    - f
+    - t
+  pregnant:
+    - f
+    - t
+  thyroid_surgery:
+    - f
+    - t
+  I131_treatment:
+    - f
+    - t
+  query_hypothyroid:
+    - f
+    - t
+  query_hyperthyroid:
+    - f
+    - t
+  lithium:
+    - f
+    - t
+  goitre:
+    - f
+    - t
+  tumor:
+    - f 
+    - t
+  hypopituitary:
+    - f
+    - t
+  psych:
+    - f
+    - t
+  referral_source:
+    - SVHC 
+    - other 
+    - SVI 
+    - STMW 
+    - SVHD
+    
+       

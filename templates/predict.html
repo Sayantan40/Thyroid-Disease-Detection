@@ -1,0 +1,359 @@
+{% extends 'header.html' %}
+
+{% block head %}
+
+
+<title>Thyroid Disease Classifier</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
+
+
+        <form action="/predict" method="post">
+            <legend>Thyroid Disease Classification Form</legend>
+            <div class="mb-3">
+                <label class="form-label">age</label>
+                <input class="form-control" type="text" name="age" placeholder="Enter a value of age"
+                    required />
+                    
+            </div>
+            <div class="mb-3">
+                <label class="form-label">sex</label>
+                <select class="form-control" type="text" name="sex" placeholder="Enter sex"
+                    required >
+                   </option>
+                   <option value="0">
+                       Female
+                  </option>
+                  <option value="1">
+                       Male
+                  </option>
+            </select>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">on_thyroxine</label>
+                <select class="form-control" type="text" name="on_thyroxine"
+                    placeholder="Enter a value of on_thyroxine" required>
+                </option>
+                <option value="0">
+                    False
+               </option>
+               <option value="1">
+                    True
+               </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">query_on_thyroxine</label>
+                <select class="form-control" type="text" name="query_on_thyroxine" placeholder="Enter query_on_thyroxine"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">on_antithyroid_medication</label>
+                <select class="form-control" type="text" name="on_antithyroid_medication"
+                    placeholder="Enter a value of on_antithyroid_medication" required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">sick</label>
+                <select class="form-control" type="text" name="sick" placeholder="Enter sick "
+                    required >
+                </option>
+                <option value="0">
+                    False
+               </option>
+               <option value="1">
+                    True
+               </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">pregnant</label>
+                <select class="form-control" type="text" name="pregnant" placeholder="Enter pregnant"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">thyroid_surgery</label>
+                <select class="form-control" type="text" name="thyroid_surgery" placeholder="Enter thyroid_surgery"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">I131_treatment</label>
+                <select class="form-control" type="text" name="I131_treatment" placeholder="Enter I131_treatment"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">query_hypothyroid</label>
+                <select class="form-control" type="text" name="query_hypothyroid" placeholder="Enter query_hypothyroid"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">query_hyperthyroid</label>
+                <select class="form-control" type="text" name="query_hyperthyroid" placeholder="Enter query_hyperthyroid"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">lithium</label>
+                <select class="form-control" type="text" name="lithium" placeholder="Enter lithium"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">goitre</label>
+                <select class="form-control" type="text" name="goitre" placeholder="Enter goitre"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">tumor</label>
+                <select class="form-control" type="text" name="tumor" placeholder="Enter tumor"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">hypopituitary</label>
+                <select class="form-control" type="text" name="hypopituitary" placeholder="Enter hypopituitary"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">psych</label>
+                <select class="form-control" type="text" name="psych" placeholder="Enter psych"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">T3</label>
+                <input class="form-control" type="text" name="T3" placeholder="Enter a value of T3"
+                required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">TT4</label>
+                <input class="form-control" type="text" name="TT4" placeholder="Enter a value of TT4"
+                    required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">T4U</label>
+                <input class="form-control" type="text" name="T4U" placeholder="Enter a value of T4U"
+                    required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">FTI</label>
+                <input class="form-control" type="text" name="FTI" placeholder="Enter a value of FTI"
+                    required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">referral_source_STMW</label>
+                <select class="form-control" type="text" name="referral_source_STMW" placeholder="Enter referral_source_STMW"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">referral_source_SVHC</label>
+                <select class="form-control" type="text" name="referral_source_SVHC" placeholder="referral_source_SVHC"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">referral_source_SVHD</label>
+                <select class="form-control" type="text" name="referral_source_SVHD" placeholder="referral_source_SVHD"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">referral_source_SVI</label>
+                <select class="form-control" type="text" name="referral_source_SVI" placeholder="referral_source_SVI"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">referral_source_other</label>
+                <select class="form-control" type="text" name="referral_source_other" placeholder="referral_source_other"
+                    required >
+                </option>
+                <option value="0">
+                    False
+                </option>
+                <option value="1">
+                    True
+                </option>
+            </select>
+            </div>
+            <div class="mb-3">
+
+                <input class="btn btn-primary" type="submit" value="Estimate Thyroid Disease class value" required />
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                Thyroid Disease class value
+            </div>
+            <div class="card-body">
+        {% if context['Thyroid_data'] is not none %}
+        <table class="table table-striped">
+            <caption>Thyroid Disease classification</caption>
+            <tr>
+                <th>Input Feature</th>
+                <th>Feature Value</th>
+
+            </tr>
+            {% for column,value in context['Thyroid_data'].items() %}
+
+
+
+            <tr>
+                <td>{{column}}</td>
+                <td>{{value[0]}}</td>
+            </tr>
+
+            {% endfor %}
+            <tr>
+
+                <td>Class</td>
+                <td>
+                    {{ context['Class'] }}
+                </td>
+            </tr>
+        </table>
+
+        {% else %}
+       
+              <h5 class="card-title">Submit Form</h5>
+              <p class="card-text">Kindly provide necessary information to classify the Throid Disease class value</p>
+            
+         
+
+        {% endif %}
+        Go to <a href="/" class="btn btn-primary">Home</a>
+    </div>
+</div>
+    </div>
+
+    {% endblock %}

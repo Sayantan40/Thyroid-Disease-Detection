@@ -1,0 +1,60 @@
+grid_search:
+  class: GridSearchCV
+  module: sklearn.model_selection
+  params:
+    cv: 5
+    verbose: 2
+model_selection:
+  module_0:
+    class: SVC
+    module: sklearn.svm
+    params:
+      C: 0.1
+      gamma: 0.1
+      kernel: 'linear'
+      n_jobs: -1
+    search_param_grid:
+      C:
+        - 1
+      gamma:
+        - 1
+      kernel:
+        - 'rbf'
+        - 'sigmoid'
+  module_1:
+    class: XGBRFClassifier
+    module: xgboost
+    params:
+      learning_rate: 0.1
+      gamma: 0.1
+      colsample_bynode: 0.8
+      n_jobs: -1
+    search_param_grid:
+      learning_rate:
+        - 0.01
+      gamma:
+        - 0.5
+        - 0.01
+      colsample_bynode:
+        - 0.6
+        - 1.0
+  module_2:
+    class: GradientBoostingClassifier
+    module: sklearn.ensemble
+    params:
+      loss: log_loss
+      n_estimators: 50
+      learning_rate: 1.0
+      criterion: friedman_mse
+    search_param_grid:
+      loss:
+        - deviance
+      n_estimators:
+        - 80
+        - 100
+      learning_rate:
+        - 0.1
+        - 0.01
+      criterion:
+        - squared_error
+
