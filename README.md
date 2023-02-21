@@ -1,7 +1,7 @@
 # Thyroid-Disease-Detection
 
 # Description: 
-## At least a person out of ten is suffered from thyroid disease in India. The
+At least a person out of ten is suffered from thyroid disease in India. The
 disorder of thyroid disease primarily happens in the women having the age 
 of 17–54. The extreme stage of thyroid results in cardiovascular 
 complications, increase in blood pressure, maximizesthe cholesterol level,
@@ -38,8 +38,8 @@ unhealthy person, already suffering from thyroid disease and check oursolution w
 is performing or not in right way
 
 ## Data Description:
-### Total Number of Records = 1030
-### Total Number of Features = 9
+### Total Number of Records = 3772
+### Total Number of Features = 30
 ![Screenshot (129)](https://user-images.githubusercontent.com/88722031/220367153-87dfa7b8-3375-4ba1-b58f-20a690e952a2.png)
 ![Screenshot (130)](https://user-images.githubusercontent.com/88722031/220367168-49ae480f-4043-485c-a68f-690b1ddf2773.png)
 
@@ -71,3 +71,5 @@ https://user-images.githubusercontent.com/88722031/220367546-d38e0176-887a-47d6-
 ## App URL
 
 https://ml-aj2g.onrender.com
+
+## The Application is slow because of being a free tier usage.
