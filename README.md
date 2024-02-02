@@ -77,3 +77,8 @@ https://ml-aj2g.onrender.com
 
 # Project Notebooks for Testing and Experimentation:
 [Notebooks](https://github.com/Sayantan40/Thyroid-Disease-Detection/tree/master/research)
+
+# Completion Certificate
+
+
+![Certificate 2_page-0001](https://github.com/Sayantan40/Thyroid-Disease-Detection/assets/88722031/412ed14f-d485-40c4-8e59-fd595d3e19f1)
