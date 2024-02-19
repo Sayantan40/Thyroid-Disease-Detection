@@ -70,7 +70,7 @@ https://user-images.githubusercontent.com/88722031/220367546-d38e0176-887a-47d6-
 
 ## App URL
 
-https://ml-aj2g.onrender.com
+[https://ml-aj2g.onrender.com](https://thyroid-disease-detection.onrender.com/)
 
 ## The Application is slow because of being a free tier usage.
 
